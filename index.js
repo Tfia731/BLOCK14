@@ -24,7 +24,7 @@ for (let i = 0; i < input.length; i++) {
 console.log(output);
 
 
-Vowel vs. consonant pseudocode
+//Vowel vs. consonant pseudocode
 
 // Define a variable vowel = 0 and consonant = 0
 // Define a variable string = ""
@@ -32,32 +32,36 @@ Vowel vs. consonant pseudocode
 // Inside the for loop, start at i = 0 and i < string.length, with i++
 // At each iteration, check to see if the letter at index i is a vowel, using an if/else
 
-If string[index] === "a", then vowel++
-else if string[index] === "e", then vowel++
-.
-.
-.
-else, consonant++
-then console.log
-(string + " has " + consonant + " consonants and " + vowel + " vowels");
+const word = "hello";
+let consonants = 0;
+let vowels = 0;
+
+for (let i = 0; i < word.length; i++) {
+    if (word[i] === "a" || word[i] === "e" || word[i] === "i" || word[i] === "o" || word[i] === "u") {
+        vowels++;
+    } else {
+        consonants++
+    }
+};
+
+console.log(word + " has " + consonants + " consonants and " + vowels + " vowels")
 
 
 
 // Reverse array
 //create a JavaScript code that creates a new array in reverse order.
-
-for(int i = 0; i < [1, 2, 3]/2; i++)
+let array = [1,2,3]
+let newarray =[]
+for(let i = array.length-1; i >= 0; i--)
 {
-    int temp = validData[i];
-    validData[i] = validData[validData.length - i - 1];
-    validData[[1, 2, 3] - i - 1] = temp;
+    newarray.push(array[i])
 }
 
 //will print in reverse 3,2,1
 
 // Fizzbuzz
 //Create a JavaScript code that prints each number from 1 to 100
- on a new line.
+ //on a new line.
 
 //For each multiple of 3, print "Fizz" instead of the number.
 
@@ -68,19 +72,14 @@ for(int i = 0; i < [1, 2, 3]/2; i++)
 //print "FizzBuzz" instead of the number.
 
 
-function fizzBuzz(start, end){
-    for(let num=start; num <= end; num++){
-        if(num % 5 === 0 && num % 3 === 0){
-          console.log("FizzBuzz")
-        }   
-        else if(num % 3 === 0){
-          console.log("Fizz")
-        }
-        else if(num % 5 === 0){
-          console.log("Buzz")
-        }
-        else {
-          console.log(num)
-        }
-    }
+for (let i = 1; i < 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+      console.log("FizzBuzz");
+  } else if (i % 5 === 0) {
+      console.log("Buzz");
+  } else if (i % 3 === 0) {
+      console.log("Fizz");
+  } else {
+      console.log(i);
+  }
 }
